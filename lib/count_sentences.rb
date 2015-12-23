@@ -15,10 +15,11 @@ class String
   end
 
   def count_sentences
-    y = []
-    self.split.each do |x|
-      y << x if x.end_with?(".") || x.end_with?("?") || x.end_with?("!") == true
-    end
-    y.count
+    self.split(/[.!?]+/).count 
+    # y = []
+    # self.split.each do |x|
+    #   y << x if x.end_with?(".") || x.end_with?("?") || x.end_with?("!") == true
+    # end
+    # y.count
   end
 end
