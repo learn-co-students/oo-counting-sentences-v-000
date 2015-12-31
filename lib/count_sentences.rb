@@ -3,18 +3,18 @@ require 'pry'
 class String
 
   def sentence?
-    self.ends_with?(".")
+    self.end_with?(".")
   end
 
   def question?
-	self.ends_with?("?")
+	self.end_with?("?")
   end
 
   def exclamation?
-	self.ends_with?("!")
+	self.end_with?("!")
   end
 
   def count_sentences
-	self.scan(/\b[A-Z][\w\s\,\...]*[\!\.\?]/).size
+	self.scan(/\b[A-Za-z][\w\s\,]*[\!\.\?]/).size
   end
 end
