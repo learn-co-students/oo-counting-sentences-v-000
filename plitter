@@ -1,0 +1,10 @@
+
+[1mFrom:[0m /home/nitrous/code/labs/oo-counting-sentences-v-000/lib/count_sentences.rb @ line 21 String#count_sentences:
+
+    [1;34m17[0m: [32mdef[0m [1;34mcount_sentences[0m
+    [1;34m18[0m:   splitter = [1;36mself[0m.split([35m[1;35m/[0m[35m[1;35m\w[0m[35m[.?!][1;35m/[0m[35m[0m)
+    [1;34m19[0m:   splitter.reject{ |e| e.empty? }
+    [1;34m20[0m:   splitter.length
+ => [1;34m21[0m:   binding.pry
+    [1;34m22[0m: [32mend[0m
+
