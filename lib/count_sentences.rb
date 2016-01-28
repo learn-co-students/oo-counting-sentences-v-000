@@ -16,9 +16,9 @@ class String
 
   def count_sentences
   	#scan way
-  	self.scan(/[^\.+!+\?+]+[\.+!+\?+]/).length
+  	self.scan(/[^\.+|!+|\?+]+[\.+|!+|\?+]/).length
   	
   	#split way
-  	self.split(/[\.+!+\?+]/).reject {|str| str.length < 1}.length
+  	self.split(/[\.+|!+|\?+]/).reject {|str| str.length < 1}.length
   end
 end
