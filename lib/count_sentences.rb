@@ -18,5 +18,4 @@ class String
     self.scan(/[!?.]\s/).length + self.scan(/[!?.]\z/).length
   end
 
-
 end
