@@ -19,4 +19,9 @@ class String
     count.delete_if{|x| x.length < 2}
     count.length
   end
+
+  ### From Learn.co ###
+#  def count_sentences
+#    self.split(/[?.!]/).delete_if{|x| x.size < 2}.size
+#  end
 end
