@@ -24,13 +24,7 @@ class String
   end
 
   def count_sentences
-    sentsplit = self.split(/\.|\?|\!/)
-    count=0
-    sentsplit.each do |i|
-      if i != nil and i != ""
-        count = count +1
-      end
-    end
+    sentsplit = self.split("
     return count
   end
 end
