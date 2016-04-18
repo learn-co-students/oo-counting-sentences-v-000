@@ -15,8 +15,6 @@ class String
   end
 
   def count_sentences
-    split_self = self.gsub(/[.?!]/, "*").split("*")
-    split_self.reject!(&:empty?)
-    split_self.count
+  self.split(/[.?!]/).reject{ |w| w.size < 2}.size
   end
 end
