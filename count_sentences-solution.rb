@@ -15,6 +15,6 @@ class String
   end
 
   def count_sentences
-    self.scan(/(\?|\.|\!)+(\s|$)/).length #=> http://rubular.com/r/3Ca2BYu0gz
+    self.split(/\.|\?|\!/).delete_if {|w| w.size < 2}.size
   end
 end
