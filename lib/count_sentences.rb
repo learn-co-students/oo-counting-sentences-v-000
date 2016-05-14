@@ -19,6 +19,10 @@ class String
 	new = array.reject { |x| x.nil? || x == '' }
 	new.count
   end
+  
+  #def count_sentences
+  #  self.split(/\.|\?|\!/).delete_if {|w| w.size < 2}.size
+  #end
 end
 
 #"This, well, is a sentence. This is too!! And so is this, I think? Woo..."
