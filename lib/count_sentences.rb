@@ -15,15 +15,6 @@ class String
   end
 
   def count_sentences
-    sent_count = 0
-    self.split("!?.")
-
-    self.each_with_index do |x, i|
-      if x == ""
-        self.delete_at(i)
-      else sent_count += 1
-      end
-    end
-    sent_count
+    self.split(/\.|\?|\!/).delete_if {|x| x.size < 2}.size
   end
 end
