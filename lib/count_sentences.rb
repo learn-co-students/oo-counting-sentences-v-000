@@ -15,10 +15,6 @@ class String
   end
 
   def count_sentences
-    proto_sentences = self.split(/[.?!]/)
-    sentences = proto_sentences.select do |sentence|
-      sentence != ""
-    end
-    sentences.length
+    self.split(/[.?!]/).reject {|sentence| sentence == ""}.length
   end
 end
