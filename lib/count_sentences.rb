@@ -27,12 +27,6 @@ class String
   end
 
   def count_sentences
-    counter = 0
-    sentences=self.scan(/[?!.](\s|$)/)
-      sentences.each do |is_it|
-      puts counter
-      counter += 1
-      end
-      counter
-    end
+    self.scan(/[.?!](\s|$)/).size
   end
+end
