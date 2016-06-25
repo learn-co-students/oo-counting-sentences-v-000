@@ -15,11 +15,6 @@ class String
   end
 
   def count_sentences
-    sentences = []
-    sentences = self.split(/([^\.?!]+[\.?!]+)/)
-    sentences.delete_if do |sentence|
-      sentence == ""
-    end
-    sentences.count
+    self.split(/([^\.?!]+[\.?!]+)/).delete_if {|sentence| sentence == ""}.count
   end
 end
