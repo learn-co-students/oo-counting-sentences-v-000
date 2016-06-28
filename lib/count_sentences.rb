@@ -32,15 +32,16 @@ class String
   end
 
   def count_sentences
-    count_array = []
-    if self.scan(/[.!?]/)
-      count_array = self.scan(/[.!?]/)
-      count_array << self.scan(/[.!?]/)
-      if count_array.size - 1 == 7
-        count_array.size - 4
-      else
-      count_array.size - 1
-      end
-    end
+    self.split(/\.|\?|\!/).delete_if {|w| w.size < 2}.size
+    #count_array = []
+    #if self.scan(/[.!?]/)
+    #  count_array = self.scan(/[.!?]/)
+    #  count_array << self.scan(/[.!?]/)
+    #  if count_array.size - 1 == 7
+    #    count_array.size - 4
+    #  else
+    #  count_array.size - 1
+    #  end
+    #end
   end
 end
