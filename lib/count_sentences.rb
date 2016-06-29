@@ -15,12 +15,6 @@ class String
   end
 
   def count_sentences
-    split_sentence = []
-    split_sentence << self.split(".", "!", "!!", "?")
-    if split_sentence.count == 0
-      0
-    else 
-      split_sentence[].count
-    end
+    self.split(/\.|\?|\!/).delete_if {|w| w.size < 2}.size
   end
 end
