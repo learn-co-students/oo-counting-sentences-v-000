@@ -4,10 +4,10 @@ class String
 
   def sentence?
     if self.end_with?(".")
-    true
-  else
-    false
-  end
+      true
+    else
+      false
+    end
   end
 
   def question?
@@ -15,8 +15,8 @@ class String
       true
     else
       false
-    end
   end
+end
 
   def exclamation?
     if self.end_with?("!")
@@ -27,6 +27,6 @@ class String
   end
 
   def count_sentences
-     self.split(/\.|\?|\!/).delete_if {|w| w.size < 2}.size
-   end
- end
+    self.split(/\.|\?|\!/).delete_if {|w| w.size < 2}.size
+  end
+end
