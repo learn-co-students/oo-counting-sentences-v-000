@@ -15,7 +15,7 @@ class String
   end
 
   def count_sentences
-    self.split(%r{[\.\?\!]+\s*}).count
+    self.split(/[\.\?\!]+\s*/).count
     # count = 0
     # self.split(" ").each do |word|
     #   count += 1 if word.sentence? || word.question? || word.exclamation?
