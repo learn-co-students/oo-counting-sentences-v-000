@@ -1,7 +1,6 @@
-require 'pry'
+'require pry'
 
 class String
-
   def sentence?
     if self.end_with?(".")
       true
@@ -15,8 +14,8 @@ class String
       true
     else
       false
+    end
   end
-end
 
   def exclamation?
     if self.end_with?("!")
