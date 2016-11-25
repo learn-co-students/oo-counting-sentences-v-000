@@ -1,25 +1,26 @@
-require 'pry'
-
 class String
 
   def sentence?
-    self.end_with?(".")
-
-    # return true if the string you are 
-    #calling it on ends in a period and 
-    #false if it does not
+    self[-1] == "."
   end
 
   def question?
-    self.end_with?("?")
+    self[-1] == "?"
   end
 
   def exclamation?
-    self.end_with?("!")
+    self[-1] == "!"
   end
 
-  def count_sentences   
-    self.split(/[\.!?]/).delete_if {|x| x==""}.count
+  def count_sentences
+    words = self.split(" ")
+    count = 0
+    words.each do |word|
+      if word.sentence? || word.question? || word.exclamation?
+        count += 1
+      end
+    end
+    count
   end
 
 end
