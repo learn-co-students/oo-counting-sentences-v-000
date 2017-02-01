@@ -1,9 +1,13 @@
 require 'pry'
-
 class String
-
-  def sentence?
-    
+  def sentence?(argument)
+    if argument.end_with?(".")
+      true
+binding.pry
+  else
+    false
+  end
+self.string = argument
   end
 
   def question?
