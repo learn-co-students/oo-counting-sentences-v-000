@@ -32,5 +32,7 @@ class String
     sentences_array.delete("")
     return sentences_array.length
 
+    #self.split(/\.|\?|!/).delete_if {|w| w.size < 2}.size
+
   end
 end
