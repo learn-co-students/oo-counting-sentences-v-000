@@ -22,6 +22,6 @@ self.end_with?("!")
 # puts sentence_count
 # else
 #   puts "0"
-self.split(/[!.?]+/).count
+self.split(/[!.?]+/).count #at first I really didn't like Regex......
   end
 end
