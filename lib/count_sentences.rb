@@ -30,4 +30,5 @@ class String
     sentence_array = self.split(/[?!.]\s/)
     return sentence_array.length
   end
+  
 end
