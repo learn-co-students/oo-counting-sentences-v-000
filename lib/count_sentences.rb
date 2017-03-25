@@ -14,6 +14,12 @@ class String
     self.end_with?('!')
   end
 
+  # Refactored #count_sentences method
+  def count_sentences
+    self.split(/\.\s|\?\s|\!\s/).count
+  end
+  
+  # Old #count_sentences method
   def count_sentences
     a = self.split(/[.!?]/)
     a.reject! {|e| e.empty?}
