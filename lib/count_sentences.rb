@@ -1,4 +1,4 @@
-require 'pry'
+
 
 class String
 
@@ -15,9 +15,7 @@ class String
   end
 
   def count_sentences
-    #binding.pry
     self.split(/[.!?]/).reject{|e| e.to_s.empty?}.count
-
   end
 end
 
