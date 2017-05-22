@@ -18,9 +18,6 @@ class String
     array = []
     array = self.split(/[\.\?\!]/)
     array.delete_if {|sentence| sentence == ""}
-    #if array.include?(" ")
-    #  array.delete sentence}
-  #binding.pry
     array.size
   end
 end
