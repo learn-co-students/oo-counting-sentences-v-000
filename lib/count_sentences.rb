@@ -17,10 +17,6 @@ class String
   def count_sentences
     separated = self.split(/[!?.]/)
     separated.delete("")
-    counter = 0
-    separated.each{ |sentence|
-      counter +=1
-    }
-    counter
+    separated.size
   end
 end
