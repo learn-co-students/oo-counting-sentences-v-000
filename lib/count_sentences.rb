@@ -18,6 +18,3 @@ class String
     self.split(/[.!?]/).reject {|x| x == ""}.count
   end
 end
-
-puts "This, well, is a sentence. This is too!! And so is this, I think? Woo..."
-.count_sentences
