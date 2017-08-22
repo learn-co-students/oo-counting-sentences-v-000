@@ -15,7 +15,7 @@ class String
   end
 
   def count_sentences
-    sentence_counter = self.split(/(\w+[.]).(\w+[.]).(\w+[?])|(.*[.])(\s.*[!])(\s.*[?])(.*[.])/)
+    sentence_counter = self.split(/[!\.?]/)
     sentence_counter.reject(&:empty?).length
   end
 end
