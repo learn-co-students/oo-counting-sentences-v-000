@@ -15,10 +15,10 @@ class String
   end
 
   def count_sentences
-   temp = self.split(/\b | \s/)
-   binding.pry
 
-
+    temp = self.split(/[\.!\?]/)
+    temp.each  { |var| temp.delete(var) if var = "" }
+    temp.count
 
   end
 end
