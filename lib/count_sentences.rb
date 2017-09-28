@@ -16,5 +16,9 @@ class String
 
   def count_sentences
     self.split(/[!\.\?]\s/).length
+
+    # THE FLATIRON SOLUTION. I THINK MINE MIGHT BE AS GOOD OR BETTER!!!
+
+    # self.split(/\.|\?|\!/).delete_if {|w| w.size < 2}.size
   end
 end
