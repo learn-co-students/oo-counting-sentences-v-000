@@ -30,12 +30,8 @@ class String
     array = []
     string = self.split('')
     string.each_with_index do |x, y|
-      if x == "."
-        array << x unless string[y-1] == "."
-      elsif x == "?"
-        array << x unless string[y-1] == "?"
-      elsif x == "!"
-        array << x unless string[y-1] == "!"
+      if x == "." || x == "?" || x == "!"
+        array << x unless string[y-1] == x
       end
     end
       array.length
