@@ -1,4 +1,4 @@
-require 'pry'
+# require 'pry'
 
 class String
 
@@ -14,15 +14,30 @@ class String
     self.end_with?("!")
   end
 
-  def count_sentences(sentences_string)
-    sentences_string = self.count
-    if self.end_with?(". ")
-      self.split(". ")
-    elsif self.end_with?("? ")
-      self.split("? ")
-    elsif self.end_with?("! ")
-      self.split("! ")
-    end
-    sentences_string
+  def count_sentences
+
+    new_array = []
+
+    new_array << self
+
+    new_array.split(/[^\w\d\s]/)
+
+    new_array.count
+
   end
+
 end
+
+#
+#
+#
+#
+# new_array << self
+# new_array.count
+
+# if self.end_with?(". ") || self.end_with?("? ") || self.end_with?("! ")
+#   self.split(". ") && self.split("? ") && self.split?("! ")
+#
+# self.each {|sentence|
+#
+# new_array << sentence}
