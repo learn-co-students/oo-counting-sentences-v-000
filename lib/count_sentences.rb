@@ -15,11 +15,6 @@ class String
   end
 
   def count_sentences
-    array = self.split(/[.!?]/)
-    final_array = []
-    array.each do |item|
-      final_array<<item if item!=""
-    end
-    final_array.length
+    array = self.split(/[.!?]/).delete_if {|w| w==""}.length
   end
 end
