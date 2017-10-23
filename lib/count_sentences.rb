@@ -15,12 +15,13 @@ class String
   end
 
   def count_sentences
-    if self.ends_with?(". ")
+    if self.end_with?(". ")
       self.split(". ")
+    elsif self.end_with?("? ")
+      self.split("? ")
+    elsif self.end_with?("! ")
+      self.split("! ")
     end
-      # if self.ends_with?(". ")
-      #   self.split(". ")
+    self.count
   end
 end
-
-binding.pry
