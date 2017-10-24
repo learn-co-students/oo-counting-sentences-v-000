@@ -15,12 +15,13 @@ class String
   end
 
   def count_sentences
-    self.split(/[^\w\d\s]/).count
+    self.split(/\.\s|\?\s|\!\s/).count
+    #.count
   end
-
+# binding.pry
 end
 
-#
+#((\.\s)|(\?\s)|(\!\s))/)
 #
 #
 #
