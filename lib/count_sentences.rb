@@ -15,15 +15,7 @@ class String
   end
 
   def count_sentences
-
-    new_array = []
-
-    new_array << self
-
-    new_array.split(/[^\w\d\s]/)
-
-    new_array.count
-
+    self.split(/[^\w\d\s]/).count
   end
 
 end
