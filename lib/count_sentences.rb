@@ -28,7 +28,7 @@ class String
   end
 
   def count_sentences
-    output = self.scan(/[a-z][.!?]/)
+    output = self.scan(/[+a-zA-Z0-9]+[.!?]/)
 
   output.size
 end
