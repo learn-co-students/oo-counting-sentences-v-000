@@ -1,14 +1,12 @@
 require 'pry'
 
 class String
-
-  attr_accessor :sentence
   
   def sentence?
    # use self keyword in this method 
-    self
+    self.scan(/[!.?]\z/)
     binding.pry
-    end
+  
    
   end
 
