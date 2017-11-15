@@ -2,8 +2,11 @@ require 'pry'
 
 class String
 
+  attr_accessor :sentence
+  
   def sentence?
-    String.scan(/[!.?]\z/)
+    @sentence.each do |punctuation| 
+      punctuation.match(/[!.?]\z/)
     binding.pry
   end
 
