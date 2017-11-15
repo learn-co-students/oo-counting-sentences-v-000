@@ -9,7 +9,8 @@ class String
   end
 
   def question?
-    self 
+    question_mark = self.scan(/[?]\z/)
+    question_mark.any?
   end
 
   def exclamation?
