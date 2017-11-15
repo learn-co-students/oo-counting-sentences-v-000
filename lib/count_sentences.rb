@@ -5,9 +5,11 @@ class String
   attr_accessor :sentence
   
   def sentence?
-    @sentence.each do |punctuation| 
-      punctuation.match(/[!.?]\z/)
+   # use self keyword in this method 
+    self
     binding.pry
+    end
+   
   end
 
   def question?
