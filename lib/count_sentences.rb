@@ -6,13 +6,10 @@ class String
    # use self keyword in this method 
     period = self.scan(/[.]\z/)
     period.any?
-    binding.pry
-  
-   
   end
 
   def question?
-
+    self 
   end
 
   def exclamation?
