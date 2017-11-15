@@ -22,6 +22,6 @@ class String
     sentence_count = self.scan(/\b[.?!]/)
     sentence_count.length
       
-    binding.pry
+    
   end
 end
