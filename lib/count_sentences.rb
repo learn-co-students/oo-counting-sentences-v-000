@@ -4,7 +4,8 @@ class String
   
   def sentence?
    # use self keyword in this method 
-    self.scan(/[!.?]\z/)
+    period = self.scan(/[.]\z/)
+    period.any?
     binding.pry
   
    
