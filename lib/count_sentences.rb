@@ -14,7 +14,8 @@ class String
   end
 
   def exclamation?
-
+    exclamation_point = self.scan(/[!]\z/)
+    exclamation_point.any?
   end
 
   def count_sentences
