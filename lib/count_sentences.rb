@@ -19,7 +19,9 @@ class String
   end
 
   def count_sentences
-    self.match(/(\b[.?!])|([.?!]\z)/)
+    sentence_count = self.scan(/\b[.?!]/)
+    sentence_count.length
+      
     binding.pry
   end
 end
