@@ -15,7 +15,6 @@ class String
   end
 
   def count_sentences
-    total_sentences = self.scan(/(\.+|!+|[?+])/)
-    total_sentences.count
+    self.split(/[.?!]+/).count
   end
 end
