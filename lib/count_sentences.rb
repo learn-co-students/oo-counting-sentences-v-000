@@ -15,10 +15,6 @@ class String
   end
 
   def count_sentences
-    counted = []
-    self.scan(/[\w][.!?]/).each do |sentence|
-      counted << sentence
-    end
-    counted.count
+    self.scan(/[\w][.!?]/).count
   end
 end
