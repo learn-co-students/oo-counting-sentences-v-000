@@ -2,8 +2,6 @@ require 'pry'
 
 class String
 
-  # attr_accessor :string
-
   def sentence?
     self.end_with?(".")
   end
@@ -18,6 +16,5 @@ class String
 
   def count_sentences
     self.split(/[.?!]+/).count
-    # self.scan(/[^\.!?]+[\.!?]/).map(&:strip).count
   end
 end
