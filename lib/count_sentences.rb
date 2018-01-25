@@ -1,20 +1,20 @@
 require 'pry'
 
 class String
+    def sentence?
+        self.end_with?('.')
+    end
 
-  def sentence?
-    
-  end
+    def question?
+        self.end_with?('?')
+    end
 
-  def question?
+    def exclamation?
+        self.end_with?('!')
+    end
 
-  end
-
-  def exclamation?
-
-  end
-
-  def count_sentences
-
-  end
+    def count_sentences
+        self.split(/[.?!]/).count{|str| str.length > 2}
+        # binding.pry
+    end
 end
