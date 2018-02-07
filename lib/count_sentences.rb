@@ -20,5 +20,8 @@ class String
       count += 1 if sentence.sentence? || sentence.question? || sentence.exclamation?
     end
     return count
+
+    # self.split(/\.|\?|\!/).delete_if {|w| w.size < 2}.size
+
   end
 end
