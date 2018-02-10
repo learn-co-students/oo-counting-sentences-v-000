@@ -19,7 +19,6 @@ class String
       0
     else
       self.split(/[!?.]\s/).count
-      # binding.pry
     end
   end
 end
