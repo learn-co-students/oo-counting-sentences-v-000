@@ -18,6 +18,7 @@ end
 end
 
   def count_sentences
-     self.split(/[.?!]/).count {|sen| sen.count}.count
+    count = self.scan(/\b[.?!]/i)
+    count.size
 end
 end
