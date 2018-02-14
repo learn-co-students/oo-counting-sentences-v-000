@@ -1,29 +1,24 @@
 require 'pry'
 
 class String
-
   def sentence?
     self.end_with?(".")
-  end
-
+  end  
+  
   def question?
     self.end_with?("?")
-  end
-
+  end  
+  
   def exclamation?
     self.end_with?("!")
-  end
+  end  
   def count_sentences
-    array = self.split(/!|\.|\.'|\?/)
-    array.map! do |sentence|
-      if sentence.empty?
-        sentence = nil
-      else
-        sentence
-      end
-    end
-    array.compact!
-    array.count
-  end
-
-end
+    string_array = self.scan(/[^\.!?]+[\.!?]/).map(&:strip)
+    size = string_array.size  
+    if size == nil 
+      return 0 
+    else
+      return size
+    end  
+  end  
+end   
