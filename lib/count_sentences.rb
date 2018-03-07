@@ -8,8 +8,8 @@ class String
   end
 
   def question?
-    self . end_with?(".")
-    self . end_with?("?")
+    self .end_with?(".")
+    self .end_with?("?")
   end
 
   def exclamation?
@@ -18,6 +18,8 @@ class String
   end
 
   def count_sentences
-  self .count("3")
+    #self .count("3")
+    self.split(" ").count
+
   end
 end
