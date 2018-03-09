@@ -38,9 +38,7 @@ class String
     str_array.length
 
 
-    # puts str_array
-    # puts str_array.length
-    # puts counter
+    # The below also work
   # self.split(/\.|\?|\!/).delete_if {|w| w.size < 1}.size
   # self.split(/[.*?*!*]/).delete_if {|w| w.size < 1}.size
   end
