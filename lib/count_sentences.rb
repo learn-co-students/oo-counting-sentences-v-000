@@ -28,20 +28,21 @@ class String
 
   def count_sentences
 
-    # self.gsub! /[.*]/, "."
+    self.gsub! /[.*]/, "."
 
-    # self.gsub! /[!*]/, "."
+    self.gsub! /[!*]/, "."
 
-    # self.gsub! /[?*]/, "."
-    # str_array = self.split(".")
-    # str_array.length
-    # counter = 0
+    self.gsub! /[?*]/, "."
+    str_array = self.split(".")
+    str_array.delete_if {|w| w.size < 1}.size
+    str_array.length
+
 
     # puts str_array
     # puts str_array.length
     # puts counter
   # self.split(/\.|\?|\!/).delete_if {|w| w.size < 1}.size
-  self.split(/[.*?*!*]/).delete_if {|w| w.size < 1}.size
+  # self.split(/[.*?*!*]/).delete_if {|w| w.size < 1}.size
   end
 
 end
