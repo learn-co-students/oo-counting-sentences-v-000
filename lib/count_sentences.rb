@@ -28,22 +28,22 @@ class String
 
   def count_sentences
 
-    self.gsub! /[.*]/, "."
+    # self.gsub! /[.*]/, "."
 
-    self.gsub! /[!*]/, "."
+    # self.gsub! /[!*]/, "."
 
-    self.gsub! /[?*]/, "."
-    str_array = self.split(".")
-    str_array.length
-    counter = 0
-    str_array.each { |str| str = "" ? counter += 1: counter }
-    # str_array.length =  str_array.length - counter
-    puts str_array
-    puts str_array.length
-    puts counter
+    # self.gsub! /[?*]/, "."
+    # str_array = self.split(".")
+    # str_array.length
+    # counter = 0
 
+    # puts str_array
+    # puts str_array.length
+    # puts counter
+  # self.split(/\.|\?|\!/).delete_if {|w| w.size < 1}.size
+  self.split(/[.*?*!*]/).delete_if {|w| w.size < 1}.size
   end
 
 end
-a = String.new("This, well, is a sentence. This is too!! And so is this, I think? Woo...")
-a.count_sentences
+# a = String.new("This, well, is a sentence. This is too!! And so is this, I think? Woo...")
+# a.count_sentences
