@@ -3,31 +3,24 @@ require 'pry'
 class String
 
   def sentence?
-     if self.end_with?(".")
-       return true
-     else
-       false
-     end
+     self.end_with?(".")
+
   end
 
   def question?
-    if self.end_with?("?")
-      return true
-    else
-      return false
-    end
+    self.end_with?("?")
+
   end
 
   def exclamation?
-    if self.end_with?("!")
-      true
-    else
-      false
-    end
+    self.end_with?("!")
   end
 
 
   def count_sentences
-    self.split(/[.!?]{1,3}/).count
-  end 
+    #self.split(/[.!?]{1,3}/).count => my solution
+    #here is the most efficient way
+    self.split(/\.|\?|\!/).delete_if {|w| w.size < 2}.size
+
+    end
   end
