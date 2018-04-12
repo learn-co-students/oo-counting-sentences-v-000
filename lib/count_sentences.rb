@@ -16,6 +16,5 @@ class String
 
   def count_sentences
     self.scan(/[^.?!]*/).reject{|sen| sen == ""}.size
-    # binding.pry
   end
 end
