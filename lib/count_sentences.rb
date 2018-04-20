@@ -3,15 +3,23 @@ require 'pry'
 class String
 
   def sentence?
-    return self.match(/\.$/) != nil ? true : false
+    # my original code
+    # return self.match(/\.$/) != nil ? true : false
+
+    # refractored code
+    self.end_with?(".")
   end
 
   def question?
-    return self.match(/\?$/) != nil ? true : false
+    # original code
+    # return self.match(/\?$/) != nil ? true : false
+    self.end_with?("?")
   end
 
   def exclamation?
-    return self.match(/\!$/) != nil ? true : false
+    # original code
+    # return self.match(/\!$/) != nil ? true : false
+    self.end_with("!")
   end
 
   def count_sentences
