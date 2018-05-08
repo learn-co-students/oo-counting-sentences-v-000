@@ -21,18 +21,6 @@ class String
   end
 
   def count_sentences
-    temp1 = ""
-    matches = ""
-    match_count = 0
-    temp1 = self.split(". ")
-    matches =  self.scan(/([A-Z][\w\s\d,]+[\.!?]+)/)
-    match_count = matches.length 
-    
-    if match_count == 0
-      temp1.length
-    elsif match_count > temp1.length
-      match_count
-    else 
-    end
-  end
+		self.split(/[\.|\?|\!]+/).count
+	end
 end
