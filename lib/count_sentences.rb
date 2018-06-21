@@ -18,9 +18,7 @@ class String
     # if self == "" || self == 0
     #   self.delete
     # else
-    string = self.split(/[.?!]/)
-    string.delete_if { |e| e == "" }
-    return string.count
+    self.split(/[.?!]/).delete_if { |e| e == "" }.count
     # end
       # if complex_string.include?("")
       #   complex_string.delete("")
