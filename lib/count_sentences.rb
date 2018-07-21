@@ -16,5 +16,6 @@ class String
 
   def count_sentences
     self.split(/\.|!/).count  # This can be refactored to /\.|\?|\!/
+    #(/\.|\?|\!/).delete_if {|w| w.size < 2}.size, This line of code will also let you eliminate empty strings from an array after going through the regex.
   end
 end
