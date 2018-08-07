@@ -28,9 +28,8 @@ class String
 
   def count_sentences
     arr = []
-    arr = self.split(/[!.?]/)
-    
+    arr = self.split(/[!.?]{1,}/)
     arr.count
   end
-  
+  binding.pry
 end
