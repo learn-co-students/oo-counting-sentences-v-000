@@ -27,9 +27,8 @@ class String
   end
 
   def count_sentences
-    
-    if self.exclamation? == true || self.question? == true || self.sentence? == true 
-     arr = self.split " "
+    if 
+     arr = self.split(/[?!.]+/)
     else 
       arr = []
     end 
