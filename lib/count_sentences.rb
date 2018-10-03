@@ -1,5 +1,3 @@
-require 'pry'
-
 class String
 
   def sentence?
@@ -20,10 +18,8 @@ class String
       sentence.count
     end 
   end
-
-    # sentance = self.scan(/[.!?]/)
-    # sentance.count
-
-#(/((?<=[a-z0-9)][.?!])|(?<=[a-z0-9][.?!]"))\s+(?="?[A-Z])/)
-
-#(/^[A-Z].+[\.!?]$/)
+  
+  
+  # def count_sentences
+  #   self.split(/\.|\?|\!/).delete_if {|w| w.size < 2}.size
+  # end
