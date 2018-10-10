@@ -15,6 +15,7 @@ class String
   end
 
   def count_sentences
-    self.split("."&&"!"&&"?").compact.count
+    split_array = self.split(/[.!?]/).compact
+    split_array.count
   end
 end
