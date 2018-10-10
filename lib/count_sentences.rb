@@ -15,10 +15,6 @@ class String
   end
 
   def count_sentences
-    if sentence? == true 
-      1
-    elsif sentence? == false 
-      0
-    end
+    self.split("."&&"!"&&"?").compact.count
   end
 end
