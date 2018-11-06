@@ -1,5 +1,3 @@
-
-require 'pry'
 class String
 
   def sentence?
@@ -14,7 +12,10 @@ class String
     self.end_with?("!")
   end
 
+
   def count_sentences
     self.split(/\.+|\?+|\!+/).count
   end
+
+
 end
