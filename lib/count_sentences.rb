@@ -15,6 +15,15 @@ class String
   end
 
   def count_sentences
+    counter = 0
+    self.split.each do |x|
 
+      if x.sentence? || x.question? || x.exclamation?
+        counter += 1
+      end
+
+    end
+    return counter
   end
+
 end
