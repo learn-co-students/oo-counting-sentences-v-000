@@ -29,7 +29,7 @@ class String
 =end
 
   def count_sentences
-    self.split.count{ |x| /\?|\.|\!/.match(x) }
+    self.split.count { |x| /\?|\.|\!/.match(x) }
   end
 
 end #<---- method end
