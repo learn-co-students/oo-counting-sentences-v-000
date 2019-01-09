@@ -14,16 +14,22 @@ class String
     self.end_with?("!")
   end
 
+=begin
   def count_sentences
     counter = 0
     self.split.each do |x|
-
       if x.sentence? || x.question? || x.exclamation?
         counter += 1
       end
-
     end
     return counter
   end
+        ********REFACTORED METHOD BELOW \/*******
+            DON'T BE AFRAID OF REGEX! YOU GOT THIS!
+=end
 
-end
+  def count_sentences
+    self.split.count{ |x| /\?|\.|\!/.match(x) }
+  end
+
+end #<---- method end
