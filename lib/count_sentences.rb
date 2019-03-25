@@ -1,3 +1,4 @@
+#require 'pry'
 class String
   def sentence?
     if self.end_with?(".")
@@ -23,5 +24,6 @@ class String
   def count_sentences
       self.split(" ")
       self.scan(/\b\.+|\?|!+/).length
+      #binding.pry
   end
 end
