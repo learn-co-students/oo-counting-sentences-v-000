@@ -21,5 +21,15 @@ class String
   end
 
   def count_sentences
+      self.split(" ")
+      #if self.sentence?
+      # self.each do |string|
+      #   if string.last_char("." || "?")
+           self.count(".?")
+         #end
+      # end
+      #self.count("?, .")
+    #else false
+    #end
   end
 end
