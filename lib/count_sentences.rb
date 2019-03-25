@@ -22,7 +22,7 @@ class String
   end
 
   def count_sentences
-      self.split("., ?, !")
+      self.split(" ")
       self.scan(/\b\.+|\?|!+/).length
       #binding.pry
   end
