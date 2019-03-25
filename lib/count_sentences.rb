@@ -25,7 +25,7 @@ class String
       #if self.sentence?
       # self.each do |string|
       #   if string.last_char("." || "?")
-           self.count(".?")
+           self.scan(/./).length
          #end
       # end
       #self.count("?, .")
