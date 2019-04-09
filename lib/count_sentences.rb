@@ -15,8 +15,7 @@ class String
   end
 
   def count_sentences
-   sentence_count = self.split(/[.?!]/).reject {|string| string.empty?} # reject {|item| block } → new_ary
-#Returns a new array containing the items in self for which the given block is not true. The ordering of non-rejected elements is maintained.
+   sentence_count = self.split(/[.?!]/).reject {|string| string.empty?} 
    return sentence_count.length
   end
 end
