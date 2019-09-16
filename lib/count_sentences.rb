@@ -1,20 +1,24 @@
 require 'pry'
 
 class String
-
   def sentence?
-    
-  end
-
+    self.end_with?(".")
+  end  
+  
   def question?
-
-  end
-
+    self.end_with?("?")
+  end  
+  
   def exclamation?
-
-  end
-
+    self.end_with?("!")
+  end  
   def count_sentences
-
-  end
-end
+    string_array = self.scan(/[^\.!?]+[\.!?]/).map(&:strip)
+    size = string_array.size  
+    if size == nil 
+      return 0 
+    else
+      return size
+    end  
+  end  
+end   
