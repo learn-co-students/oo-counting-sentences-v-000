@@ -1,0 +1,5 @@
+require 'pry'
+require_relative '../lib/count_sentences.rb'
+
+sentences = "This, well, is a sentence. This is too!! And so is this, I think? Woo..."
+sentences.count_sentences
